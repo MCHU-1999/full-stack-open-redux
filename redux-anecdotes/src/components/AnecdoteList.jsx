@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { voteFor } from '../reducers/anecdoteReducer'
+import { newMessage } from '../reducers/notificationReducer'
 
 const AnecdoteList = () => {
 
@@ -12,6 +13,7 @@ const AnecdoteList = () => {
   const vote = (id) => {
     console.log('vote', id)
     dispatch(voteFor(id))
+    dispatch(newMessage(`You voted for id ${id}`))
   }
 
   return (
