@@ -1,8 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { voteFor } from '../reducers/anecdoteReducer'
 
-Array.include
-
 const AnecdoteList = () => {
 
   const anecdotes = useSelector(state => {
