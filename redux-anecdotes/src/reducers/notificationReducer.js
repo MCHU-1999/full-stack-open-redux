@@ -7,7 +7,6 @@ const notificationSlice = createSlice({
     newMessage(state, action) {
       console.log('newMessage')
       state.push(action.payload)
-      // return action.payload
     },
     shiftMessage(state, action) {
       console.log('shiftMessage')

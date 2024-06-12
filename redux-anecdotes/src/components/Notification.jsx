@@ -9,20 +9,22 @@ const Notification = () => {
     border: 'solid',
     padding: 10,
     borderWidth: 1,
-    minHeight: '22.5px'
+    height: '50px',
+    maxHeight: '50px',
+    overflow: 'scroll',
   }
 
   useEffect(() => {
     if (notification.length !== 0) {
       setTimeout(() => {
         dispatch(shiftMessage())
-      }, 2500)
+      }, 5000)
     }
   }, [notification])
 
   return (
     <div style={style}>
-      {notification.map(message => <>{message}   </>)}
+      {notification.map((message, i) => <p key={i}>{message}</p>)}
     </div>
   )
 }

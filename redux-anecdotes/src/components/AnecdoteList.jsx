@@ -13,7 +13,8 @@ const AnecdoteList = () => {
   const vote = (id) => {
     console.log('vote', id)
     dispatch(voteFor(id))
-    dispatch(newMessage(`You voted for id ${id}`))
+    const thisOne = anecdotes.filter(e => e.id === id)
+    dispatch(newMessage(`You voted '${thisOne[0].content}'`))
   }
 
   return (
