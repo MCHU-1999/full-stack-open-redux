@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
-import { shiftMessage } from '../reducers/notificationReducer'
+// import { useEffect } from 'react'
+// import { shiftMessage } from '../reducers/notificationReducer'
 
 const Notification = () => {
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
   const notification = useSelector(state => state.notifications)
   const style = {
     border: 'solid',
@@ -14,13 +14,13 @@ const Notification = () => {
     overflow: 'scroll',
   }
 
-  useEffect(() => {
-    if (notification.length !== 0) {
-      setTimeout(() => {
-        dispatch(shiftMessage())
-      }, 5000)
-    }
-  }, [notification])
+  // useEffect(() => {
+  //   if (notification.length !== 0) {
+  //     setTimeout(() => {
+  //       dispatch(shiftMessage())
+  //     }, 5000)
+  //   }
+  // }, [notification])
 
   return (
     <div style={style}>
