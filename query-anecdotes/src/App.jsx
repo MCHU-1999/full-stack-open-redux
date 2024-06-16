@@ -18,7 +18,6 @@ const App = () => {
   })
 
   const context = useContext(NotificationContext)
-  
   const newNotification = (noti) => {
     const dispatch = context[1]
     dispatch({ type: 'PUSH', payload: noti })
